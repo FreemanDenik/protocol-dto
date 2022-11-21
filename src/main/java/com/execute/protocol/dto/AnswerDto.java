@@ -21,7 +21,7 @@ public class AnswerDto{
     private byte influence;
     private byte shadow;
     private byte luck;
-    private Set<ThingDto> addThings;
+    private Set<ThingDto> giveThings;
     private Set<ThingDto> ifThings;
     private int link;
     private Set<CategoryDto> openCategories;

@@ -8,9 +8,10 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class CategoryDto {
+public class CategoryDto{
     @EqualsAndHashCode.Include
     private int id;
+    private boolean publication;
     @EqualsAndHashCode.Include
     private String title;
     private String description;

@@ -11,6 +11,7 @@ import lombok.*;
 public class ThingDto {
     @EqualsAndHashCode.Include
     private int id;
+    private boolean publication;
     @EqualsAndHashCode.Include
     private String title;
     private String description;

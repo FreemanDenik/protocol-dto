@@ -10,7 +10,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class FastFinerDto {
+public class SearchFinerDto {
     @EqualsAndHashCode.Include
     private String search;
     // Исключенные из поиска коллекция id категории

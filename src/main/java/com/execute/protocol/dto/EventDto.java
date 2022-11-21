@@ -15,6 +15,11 @@ public class EventDto {
     @EqualsAndHashCode.Include
     private int id;
     private boolean useOnce;
+    private boolean publication;
+    private int parentEvent;
+    private int ownEvent;
+    private int ownAnswer;
+    private boolean child;
     private CategoryDto category;
     @EqualsAndHashCode.Include
     private String eventText;
