@@ -9,6 +9,17 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class ThingDto {
+    /**
+     * Конструктор копирования
+     * @param thingDto
+     */
+    public ThingDto(ThingDto thingDto) {
+        id = thingDto.id;
+        publication = thingDto.publication;
+        title = thingDto.title;
+        description = thingDto.description;
+    }
+
     @EqualsAndHashCode.Include
     private int id;
     private boolean publication;
