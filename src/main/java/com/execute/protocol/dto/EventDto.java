@@ -21,6 +21,7 @@ public class EventDto {
         useOnce = eventDto.useOnce;
         publication = eventDto.publication;
         child = eventDto.child;
+        shadow = eventDto.shadow;
         category = new CategoryDto(eventDto.category);
         eventText = eventDto.eventText;
         answers = eventDto.getAnswers().stream().map(AnswerDto::new).collect(Collectors.toSet());
@@ -33,6 +34,7 @@ public class EventDto {
 //    private int parentEvent;
 //    private int ownEvent;
 //    private int ownAnswer;
+    private boolean shadow;
     private boolean child;
     private CategoryDto category;
     @EqualsAndHashCode.Include
