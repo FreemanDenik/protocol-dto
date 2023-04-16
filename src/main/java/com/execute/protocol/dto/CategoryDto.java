@@ -1,5 +1,6 @@
 package com.execute.protocol.dto;
 
+import com.execute.protocol.interfaces.FastFinerDto;
 import lombok.*;
 
 @Getter
@@ -8,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class CategoryDto{
+public class CategoryDto implements FastFinerDto {
     /**
      * Конструктор копирования
      * @param categoryDto

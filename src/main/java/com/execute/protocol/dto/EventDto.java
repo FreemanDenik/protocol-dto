@@ -1,5 +1,6 @@
 package com.execute.protocol.dto;
 
+import com.execute.protocol.interfaces.FastFinerDto;
 import lombok.*;
 
 import java.util.*;
@@ -11,7 +12,7 @@ import java.util.stream.Collectors;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class EventDto {
+public class EventDto implements FastFinerDto {
     /**
      * Конструктор копирования
      * @param eventDto
@@ -31,14 +32,19 @@ public class EventDto {
     private int id;
     private boolean useOnce;
     private boolean publication;
-//    private int parentEvent;
-//    private int ownEvent;
-//    private int ownAnswer;
     private boolean shadow;
     private boolean child;
     private CategoryDto category;
     @EqualsAndHashCode.Include
     private String eventText;
     private Set<AnswerDto> answers;
-
+    private Map<String, Integer> openCarts;
+    @Override
+    public String getTitle() {
+        return eventText;
+    }
+    @Override
+    public String getDescription() {
+        return null;
+    }
 }

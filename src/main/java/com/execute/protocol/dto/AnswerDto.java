@@ -2,7 +2,6 @@ package com.execute.protocol.dto;
 
 import lombok.*;
 
-import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -28,7 +27,7 @@ public class AnswerDto {
         shadow = answerDto.shadow;
         luck = answerDto.luck;
         giveThings = answerDto.giveThings.stream().map(ThingDto::new).collect(Collectors.toSet());
-        openCarts = Optional.ofNullable(answerDto.openCarts).map(w->w.stream().map(MiniEventDto::new).collect(Collectors.toSet())).orElse(Set.of());
+        openCarts = Optional.ofNullable(answerDto.openCarts).map(w->w.stream().map(ShadowEventDto::new).collect(Collectors.toSet())).orElse(Set.of());
         takeThings = answerDto.takeThings.stream().map(ThingDto::new).collect(Collectors.toSet());
         ifThings = answerDto.ifThings.stream().map(ThingDto::new).collect(Collectors.toSet());
         linkEvent = answerDto.linkEvent;
@@ -47,7 +46,7 @@ public class AnswerDto {
     private byte shadow;
     private byte luck;
     private Set<ThingDto> giveThings;
-    private Set<MiniEventDto> openCarts;
+    private Set<ShadowEventDto> openCarts;
     private Set<ThingDto> takeThings;
     private Set<ThingDto> ifThings;
     private int linkEvent;
