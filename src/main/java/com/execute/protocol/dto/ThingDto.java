@@ -1,5 +1,6 @@
 package com.execute.protocol.dto;
 
+import com.execute.protocol.enums.EmTarget;
 import com.execute.protocol.interfaces.FastFinerDto;
 import lombok.*;
 
@@ -27,7 +28,7 @@ public class ThingDto implements FastFinerDto {
     @EqualsAndHashCode.Include
     private String title;
     private String description;
-//    private EmAction action;
-//    private EmTarget target;
-//    private int count;
+    private EmTarget target;  // GOLD     REPUTATION  ANSWER
+    //почему такое название meaning? Потому что если использовать "value" которое хочется, то падает база H2 и тесты не работают
+    private int meaning;
 }
