@@ -37,6 +37,7 @@ public class EventDto implements FastFinerDto {
     private CategoryDto category;
     @EqualsAndHashCode.Include
     private String eventText;
+    private String description;
     private AnswerDto ownAnswer;
     private Set<AnswerDto> answers;
     private Map<String, Integer> openCarts;
@@ -46,6 +47,6 @@ public class EventDto implements FastFinerDto {
     }
     @Override
     public String getDescription() {
-        return null;
+        return description;
     }
 }

@@ -40,6 +40,7 @@ public class AnswerDto {
     private boolean useOnce;
     @EqualsAndHashCode.Include
     private String answerText;
+    private String description;
     private byte gold;
     private byte reputation;
     private byte influence;
